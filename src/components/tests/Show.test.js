@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 
 import Show from "./../Show";
 
-const testShow = {
+export const testShow = {
   //add in approprate test data structure here.
   name: "Castlevania",
   summary: "Follow Trevor Belmont on his journey as a vampire slayer.",
