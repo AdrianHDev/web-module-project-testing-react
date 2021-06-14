@@ -17,15 +17,17 @@ const testEpisodeWithoutImage = {
 }
 
 test("renders without error", () => {
-
+    render(<Episode episode={testEpisode}/>)
 });
 
 test("renders the summury test passed as prop", ()=>{
-    
+    render(<Episode episode={{...testEpisode, summary: "This is a test of the summary."}}/>)
+    expect(screen.getByText('This is a test of the summary.'))
 });
 
 test("renders default image when image is not defined", ()=>{
-    
+    render(<Episode episode={{...testEpisode, image: null}}/>)
+    expect(screen.getByAltText('./stranger_things.png'))
 })
 
 //Tasks
